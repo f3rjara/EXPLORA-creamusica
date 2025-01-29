@@ -1,0 +1,49 @@
+@use "../../../../../assets/styles/vars" as *;
+
+.box-mensage {
+  background-color: $primary-color ;
+  border-radius: 15px;
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  color: #fff;
+  padding: 30px;
+  font-size: 24px;
+  font-family: $font-Lora;
+  font-weight: 400;
+  color: $white-color;
+  z-index: 999;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.219);
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 35px;
+
+  .box-mensage__icon {
+    width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--note {
+      width: 75px;
+    }
+  }
+
+
+  &.balloon {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 45px;
+      border-radius: 10px;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 70%);
+      clip-path: polygon(0 0, 100% 0, 55% 100%, 45% 100%);
+      background-color: $primary-color;
+    }
+  }
+}

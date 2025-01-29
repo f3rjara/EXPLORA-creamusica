@@ -1,0 +1,38 @@
+@use "../../../../../assets/styles/vars" as *;
+
+.content {
+  height: calc(100vh - 180px);
+  display: flex;
+  align-items: flex-end;
+}
+
+.musical-notes {
+  display: grid;
+  width: 100px;
+  grid-template-columns: repeat(1, 1fr);
+
+  .musical-notes__item {
+    font-family: $font-Lora;
+    font-weight: 700;
+    color: $dark-color;
+    display: grid;
+    place-items: center;
+  }
+}
+
+.musical-notes {
+  margin-top: auto;
+
+  &.cromatica {
+    grid-template-rows: repeat(12, 1fr);
+    height: 100%;
+  }
+  &.mayor {
+    grid-template-rows: repeat(7, 1fr);
+    height: 58.4%;
+  }
+  &.pentatonica {
+    grid-template-rows: repeat(5, 1fr);
+    height: 41.5%;
+  }
+}

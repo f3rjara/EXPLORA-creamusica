@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Lora";
+  src: url(../fonts/Lora/Lora-Italic-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: "Pluto";
+  src: url(../fonts/Pluto/PlutoRegular.woff);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Pluto";
+  src: url(../fonts/Pluto/PlutoMedium.woff);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Pluto";
+  src: url(../fonts/Pluto/PlutoBold.woff);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Pluto";
+  src: url(../fonts/Pluto/PlutoHeavy.woff);
+  font-weight: 900;
+}
+
+$font-Lora: 'Lora';
+$font-Pluto: 'Pluto';

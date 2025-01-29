@@ -1,0 +1,31 @@
+<section class="container-tutorial">
+  <div class="animation-one">
+    <app-hand-shape class="animation-one__hand"></app-hand-shape>
+    <app-box-mensage class="animation-one__box">
+      <span *ngIf="languageSelect === 'spanish'">Ubica las fichas <br> en la mesa para crear <br> tu propia música</span>
+      <span *ngIf="languageSelect !== 'spanish'">Place the <br> tiles on the table <br> to create your own music</span>
+    </app-box-mensage>
+  </div>
+
+  <div class="animation-ballow animation-ballow--two">
+    <app-box-mensage class="animation-ballow__box animation-ballow__box--two" [icon]="'bulb'" [show_balloon]="true">
+      <span *ngIf="languageSelect === 'spanish'">Usa este botón <br> para activar <br> y desactivar <br> el tutorial</span>
+      <span *ngIf="languageSelect !== 'spanish'">Use this button <br> to turn On and Off <br> the tutorial</span>
+    </app-box-mensage>
+  </div>
+
+  <div class="animation-ballow animation-ballow--three">
+    <app-box-mensage class="animation-ballow__box animation-ballow__box--three" [icon]="'note'" [show_balloon]="true">
+      <span *ngIf="languageSelect === 'spanish'">Usa este botón para <br> cambiar la escala <br> de tu composición</span>
+      <span *ngIf="languageSelect !== 'spanish'">Use this button to <br> change the scale <br> of your composition</span>
+    </app-box-mensage>
+  </div>
+
+  <div class="animation-ballow animation-ballow--four">
+    <app-box-mensage class="animation-ballow__box animation-ballow__box--four" [icon]="'tempo'" [show_balloon]="true" (animationend)="endShowtutorial()">
+      <span *ngIf="languageSelect === 'spanish'">Tempo hace referencia <br> a la velocidad con la <br> que va a ejecutarse <br> la pieza musical</span>
+      <span *ngIf="languageSelect !== 'spanish'">Tempo refers to the speed<br> with which the  is going to play <br> the piece of music</span>
+    </app-box-mensage>
+  </div>
+
+</section>

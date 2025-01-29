@@ -1,0 +1,27 @@
+<div class="main-calibrated" id="main-calibrated">
+  <!-- separate into a component -->
+  <app-draw-objects></app-draw-objects>
+</div>
+<main class="main-container animate__animated animate__fadeIn">
+  <app-tutorial *ngIf="isShowTutorial"></app-tutorial>
+  <div class="musical-table">
+    <app-musical-notes [selectedScale]="selectedScale"></app-musical-notes>
+
+    <div
+      id="time-bar"
+      class="time-bar"
+      [ngClass]="'time-bar--' + selectedScale.name"
+    ></div>
+    
+    <div id="musical-grid" class="musical-grid" [ngClass]="selectedScale.name">
+      <div *ngFor="let cell of cells; let i = index"
+        class="musical-grid__item"></div>
+    </div>
+
+    <app-ghost-grid
+      [cellsGhostGrid]="gridShow"
+      [columnsGhostGrid]="columnsShow"
+    ></app-ghost-grid>
+  </div>
+  <app-musical-timeline></app-musical-timeline>
+</main>

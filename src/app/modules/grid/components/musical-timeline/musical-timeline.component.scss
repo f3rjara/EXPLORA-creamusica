@@ -1,0 +1,72 @@
+@use "../../../../../assets/styles/vars" as *;
+
+.timeline {
+  position: relative;
+  display: flex;
+  width: calc(100% - 100px);
+  max-width: auto;
+  justify-content: space-between;
+  align-items: center;
+  &__container {
+    position: relative;
+    width: auto;
+    height: 100px;
+    padding-left: 100px;
+  }
+
+  &__time {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    font-family: $font-Pluto;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: $dark-color;
+  }
+
+  &__bar {
+    position: absolute;
+    z-index: 10;
+    left: 95px;
+    top: 25%;
+    height: 50%;
+  }
+
+  &--regular {
+    position: absolute;
+  }
+
+  &__show {
+    position: absolute;
+    width: 0%;
+    height: 100px;
+    z-index: 5;
+    overflow: hidden;
+  }
+
+  &--active {
+    width: calc(100vw - 142px);
+    top: 0;
+  }
+  &__columns {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__line {
+    min-width: 4px;
+    height: 4px;
+    margin: 0;
+    border-radius: 2em;
+    background-color: #aaa;
+  }
+}

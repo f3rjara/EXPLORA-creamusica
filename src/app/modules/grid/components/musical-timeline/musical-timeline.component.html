@@ -1,0 +1,42 @@
+<div class="timeline__container">
+  <div>
+    <p class="timeline__time" id="timeline-time">0.00s</p>
+  </div>
+  <img
+    #timeBar
+    src="../../../../../assets/images/time-bar.png"
+    alt=""
+    id="timeline-bar"
+    class="timeline__bar"
+  />
+  <div class="timeline timeline--regular">
+    <div class="timeline__columns" *ngFor="let column of columns">
+      <span
+        #lineDiv
+        class="timeline__line"
+        *ngFor="let line of column"
+        [ngStyle]="{
+          'background-color': '#aaa',
+          'height.%': line * 0.5,
+          'max-height.%': 90
+        }"
+      ></span>
+    </div>
+  </div>
+  <div id="timeline-show" class="timeline__show">
+    <div class="timeline timeline--active">
+      <div class="timeline__columns" *ngFor="let column of columns">
+        <span
+          #lineDiv
+          class="timeline__line"
+          *ngFor="let line of column"
+          [ngStyle]="{
+            'background-color': '#ee7d58',
+            'height.%': line * 0.5,
+            'max-height.%': 90
+          }"
+        ></span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="content">
+  <div
+    class="musical-notes"
+    [ngClass]="{
+      cromatica: selectedScale.name === 'cromatica',
+      mayor: selectedScale.name === 'mayor',
+      pentatonica: selectedScale.name === 'pentatonica'
+    }"
+    *ngIf="selectedScale"
+  >
+    <div *ngFor="let note of selectedScale.notes" class="musical-notes__item">
+      {{ language === "spanish" ? note : (note | i18nSelect: langEnglishMap) }}
+    </div>
+  </div>
+</div>

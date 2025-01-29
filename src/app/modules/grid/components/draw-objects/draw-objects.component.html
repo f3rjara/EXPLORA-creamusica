@@ -1,0 +1,11 @@
+<div
+  *ngFor="let object of objectsInstrumentsDraw"
+  class="shape-object-detected"
+  [ngClass]="'shape-object-detected--' + object.name"
+  [ngStyle]="{
+    'top.px':  ( ( object.y - this.configInitCalibration.zero_point_y1  ) * this.configInitCalibration.factor_y ), 
+    'left.px': ( ( object.x - this.configInitCalibration.zero_point_x1  ) * this.configInitCalibration.factor_x ) - 50,
+    'width.px': object.width > 60 ? '60' : object.width,
+    'height.px': object.width > 60 ? '60' : object.width
+  }"
+></div>

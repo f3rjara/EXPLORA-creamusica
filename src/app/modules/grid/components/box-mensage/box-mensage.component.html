@@ -1,0 +1,8 @@
+<div class="box-mensage" [ngClass]="{ 'balloon' : show_balloon }">
+  <div class="box-icon" *ngIf="icon !== undefined">
+    <app-bulb *ngIf="icon == 'bulb'" class="box-mensage__icon box-mensage__icon--bulb"></app-bulb>
+    <app-note *ngIf="icon == 'note'" class="box-mensage__icon box-mensage__icon--note"></app-note>
+    <app-tempo *ngIf="icon == 'tempo'" class="box-mensage__icon box-mensage__icon--tempo"></app-tempo>
+  </div>
+  <ng-content></ng-content>
+</div>

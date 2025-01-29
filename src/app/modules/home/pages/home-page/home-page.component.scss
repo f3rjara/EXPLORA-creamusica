@@ -1,0 +1,13 @@
+@use "../../../../../assets/styles/vars" as *;
+
+.home-page {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $primary-color;
+
+  img {
+    max-width: 80%;
+  }
+}
